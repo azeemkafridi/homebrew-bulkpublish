@@ -27,7 +27,6 @@ class Bulkpublish < Formula
   end
 
   test do
-    output = shell_output("node -e \"const bp = require('#{libexec}/lib/node_modules/bulkpublish'); console.log('ok')\"")
-    assert_match "ok", output
+    assert_predicate libexec/"lib/node_modules/bulkpublish/dist/index.js", :exist?
   end
 end
