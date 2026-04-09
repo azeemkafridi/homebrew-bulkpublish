@@ -1,8 +1,8 @@
 class Bulkpublish < Formula
   desc "Social media automation API for AI agents — SDK and MCP server"
   homepage "https://github.com/azeemkafridi/bulkpublish-api"
-  url "https://registry.npmjs.org/bulkpublish/-/bulkpublish-1.0.1.tgz"
-  sha256 "bf50069da53ce71e94ae86d12db0c8bc7a0b70826fa2049a98666a3e3a607684"
+  url "https://registry.npmjs.org/bulkpublish/-/bulkpublish-1.0.2.tgz"
+  sha256 "f3eb5ad9dc98fafc9eede795cf4dfc47115f6e37ec119b63d70ef403c646f50e"
   license "MIT"
 
   depends_on "node@22"
