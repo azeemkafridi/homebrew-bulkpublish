@@ -1,15 +1,19 @@
 class Bulkpublish < Formula
-  desc "Social media automation API for AI agents — SDK and MCP server"
+  desc "Social media automation SDK for AI agents and developers"
   homepage "https://github.com/azeemkafridi/bulkpublish-api"
-  url "https://registry.npmjs.org/bulkpublish/-/bulkpublish-1.0.2.tgz"
-  sha256 "f3eb5ad9dc98fafc9eede795cf4dfc47115f6e37ec119b63d70ef403c646f50e"
+  url "https://registry.npmjs.org/bulkpublish/-/bulkpublish-1.3.2.tgz"
+  sha256 "67aa00384aa9029a943765c2c1e93476e9e82c97f1dc1613dde7ca8e31f5d956"
   license "MIT"
 
   depends_on "node@22"
 
   def install
+    # No `bin.install_symlink Dir[libexec/"bin/*"]` here on purpose: the
+    # `bulkpublish` package declares no `bin`, so that line has always
+    # symlinked an empty list. This formula installs a LIBRARY, which is what
+    # the caveats below say and what the test asserts. Put the line back the
+    # day the package ships an executable.
     system "npm", "install", *std_npm_args
-    bin.install_symlink Dir[libexec/"bin/*"]
   end
 
   def caveats

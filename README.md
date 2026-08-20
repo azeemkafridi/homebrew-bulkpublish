@@ -9,6 +9,9 @@ brew tap azeemkafridi/bulkpublish
 brew install bulkpublish
 ```
 
+This installs the Node SDK as a library. It adds no command to your `PATH` —
+you call it from your own code, as below.
+
 ## Usage
 
 ```javascript
